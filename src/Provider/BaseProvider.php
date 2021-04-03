@@ -1,11 +1,11 @@
 <?php
 
-namespace Xylis\FakerCinema\Provider;
+namespace PointPlus\FakerCinema\Provider;
 
 use Faker\Provider\Base as FakerProvider;
 
 /**
- * @package Xylis\FakerCinema
+ * @package PointPlus\FakerCinema
  */
 abstract class BaseProvider extends FakerProvider
 {

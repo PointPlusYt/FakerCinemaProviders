@@ -8,7 +8,7 @@ class PersonProviderTest extends \PHPUnit\Framework\TestCase
     public function formattersAreWorkingAndNotEmpty()
     {
         $faker = \Faker\Factory::create();
-        $faker->addProvider(new \Xylis\FakerCinema\Provider\Person($faker));
+        $faker->addProvider(new \PointPlus\FakerCinema\Provider\Person($faker));
 
         $this->assertNotEmpty($faker->director);
         $this->assertNotEmpty($faker->maleDirector);
@@ -32,7 +32,7 @@ class PersonProviderTest extends \PHPUnit\Framework\TestCase
     public function multipleProvidersAreWorking()
     {
         $faker = \Faker\Factory::create();
-        $faker->addProvider(new \Xylis\FakerCinema\Provider\Person($faker));
+        $faker->addProvider(new \PointPlus\FakerCinema\Provider\Person($faker));
 
         $this->assertCount(1, $faker->directors(null, 1));
         $this->assertCount(3, $faker->directors(null));

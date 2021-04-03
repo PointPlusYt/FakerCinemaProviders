@@ -1,8 +1,8 @@
 <?php
 
-namespace Xylis\FakerCinema\Provider;
+namespace PointPlus\FakerCinema\Provider;
 
-use Xylis\FakerCinema\Provider\BaseProvider;
+use PointPlus\FakerCinema\Provider\BaseProvider;
 
 class Character extends BaseProvider
 {

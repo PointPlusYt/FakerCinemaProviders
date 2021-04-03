@@ -8,7 +8,7 @@ class TvShowProviderTest extends \PHPUnit\Framework\TestCase
     public function formattersAreWorkingAndNotEmpty()
     {
         $faker = \Faker\Factory::create();
-        $faker->addProvider(new \Xylis\FakerCinema\Provider\TvShow($faker));
+        $faker->addProvider(new \PointPlus\FakerCinema\Provider\TvShow($faker));
 
         $this->assertGreaterThanOrEqual(1, $faker->tvShowTotalSeasons);
         $this->assertLessThanOrEqual(25, $faker->tvShowTotalSeasons);
@@ -29,7 +29,7 @@ class TvShowProviderTest extends \PHPUnit\Framework\TestCase
     public function multipleProvidersAreWorkingAndNotEmpty()
     {
         $faker = \Faker\Factory::create();
-        $faker->addProvider(new \Xylis\FakerCinema\Provider\TvShow($faker));
+        $faker->addProvider(new \PointPlus\FakerCinema\Provider\TvShow($faker));
 
         $this->assertCount(1, $faker->tvShows(1));
         $this->assertCount(3, $faker->tvShows());

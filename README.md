@@ -25,13 +25,13 @@ composer require xylis/faker-cinema-providers
 
 Below is the list of bundled formatters in the default locale.
 
-### `Xylis\FakerCinema\Provider\Movie`
+### `PointPlus\FakerCinema\Provider\Movie`
 
 ```php
 <?php
 
 $faker = \Faker\Factory::create();
-$faker->addProvider(new \Xylis\FakerCinema\Provider\Movie($faker));
+$faker->addProvider(new \PointPlus\FakerCinema\Provider\Movie($faker));
 
 $faker->movie; // Saving Private Ryan
 $faker->studio; // 20th Century Fox
@@ -47,13 +47,13 @@ $faker->movieGenres(2); // array('Drama', 'Comedy');
 
 ```
 
-### `Xylis\FakerCinema\Provider\TvShow`
+### `PointPlus\FakerCinema\Provider\TvShow`
 
 ```php
 <?php
 
 $faker = \Faker\Factory::create();
-$faker->addProvider(new \Xylis\FakerCinema\Provider\TvShow($faker));
+$faker->addProvider(new \PointPlus\FakerCinema\Provider\TvShow($faker));
 
 $faker->tvShow; // Breaking Bad
 $faker->tvNetwork; // HBO
@@ -68,13 +68,13 @@ $faker->tvNetworks(2); // array('Netflix', 'ABC')
 $faker->showGenres(2); // array('Drama', 'Sitcom')
 
 ```
-### `Xylis\FakerCinema\Provider\Person`
+### `PointPlus\FakerCinema\Provider\Person`
 
 ```php
 <?php
 
 $faker = \Faker\Factory::create();
-$faker->addProvider(new \Xylis\FakerCinema\Provider\Person($faker));
+$faker->addProvider(new \PointPlus\FakerCinema\Provider\Person($faker));
 
 $faker->actor; // Cate Blanchett
 $faker->femaleActor; // Emma Stone
@@ -107,7 +107,7 @@ $faker->femalePersons($count = 2, $duplicates = false); // array('Agnès Varda',
 $faker->malePersons($count = 2, $duplicates = false); // array('Denis Villeneuve', 'Leonardo Dicaprio');
 ```
 
-### `Xylis\FakerCinema\Provider\Character`
+### `PointPlus\FakerCinema\Provider\Character`
 
 Generates product and department data for e-commerce websites and online stores.
 
@@ -115,7 +115,7 @@ Generates product and department data for e-commerce websites and online stores.
 <?php
 
 $faker = \Faker\Factory::create();
-$faker->addProvider(new \Xylis\FakerCinema\Provider\Character($faker));
+$faker->addProvider(new \PointPlus\FakerCinema\Provider\Character($faker));
 
 $faker->character($gender = null); // Skyler White
 $faker->character($gender = 'male'); // Darth Vader

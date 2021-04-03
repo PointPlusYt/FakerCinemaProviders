@@ -8,7 +8,7 @@ class MovieProviderTest extends \PHPUnit\Framework\TestCase
     public function formattersAreWorkingAndNotEmpty()
     {
         $faker = \Faker\Factory::create();
-        $faker->addProvider(new \Xylis\FakerCinema\Provider\Movie($faker));
+        $faker->addProvider(new \PointPlus\FakerCinema\Provider\Movie($faker));
 
         $this->assertNotEmpty($faker->movie);
         $this->assertNotEmpty($faker->runtime);
@@ -24,7 +24,7 @@ class MovieProviderTest extends \PHPUnit\Framework\TestCase
     public function multipleProvidersAreWorkingAndNotEmpty()
     {
         $faker = \Faker\Factory::create();
-        $faker->addProvider(new \Xylis\FakerCinema\Provider\Movie($faker));
+        $faker->addProvider(new \PointPlus\FakerCinema\Provider\Movie($faker));
 
         $this->assertCount(1, $faker->movies(1));
         $this->assertCount(3, $faker->movies());

@@ -1,12 +1,12 @@
 <?php
 
-namespace Xylis\FakerCinema\Provider;
+namespace PointPlus\FakerCinema\Provider;
 
-use Xylis\FakerCinema\Provider\BaseProvider;
+use PointPlus\FakerCinema\Provider\BaseProvider;
 
 /**
- * @author Xylis <julien.ravia@gmail.com>
- * @package Xylis\FakerCinema
+ * @author PointPlus <julien.ravia@gmail.com>
+ * @package PointPlus\FakerCinema
  */
 class Person extends BaseProvider
 {

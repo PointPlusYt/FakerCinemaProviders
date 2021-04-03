@@ -8,7 +8,7 @@ class CharacterProviderTest extends \PHPUnit\Framework\TestCase
     public function formattersAreWorkingAndNotEmpty()
     {
         $faker = \Faker\Factory::create();
-        $faker->addProvider(new \Xylis\FakerCinema\Provider\Character($faker));
+        $faker->addProvider(new \PointPlus\FakerCinema\Provider\Character($faker));
 
         $this->assertNotEmpty($faker->character);
         $this->assertNotEmpty($faker->maleCharacter);
@@ -22,7 +22,7 @@ class CharacterProviderTest extends \PHPUnit\Framework\TestCase
     {
 
         $faker = \Faker\Factory::create();
-        $faker->addProvider(new \Xylis\FakerCinema\Provider\Character($faker));
+        $faker->addProvider(new \PointPlus\FakerCinema\Provider\Character($faker));
 
         $this->assertCount(3, $faker->characters);
         $this->assertCount(1, $faker->characters(null, 1));

@@ -1,6 +1,6 @@
 {
-  "name": "xylis/faker-cinema-providers",
-  "description": "Generate random movie & shows datas using fzaninotto/Faker (based on real names & datas)",
+  "name": "pointplus/faker-cinema-providers",
+  "description": "Generate random movie & shows datas using fakerphp/Faker (based on real names & datas), this project is forked from xylis/faker-cinema-providers",
   "minimum-stability": "stable",
   "license": "MIT",
   "type": "library",
@@ -8,15 +8,19 @@
     {
       "name": "Julien RAVIA",
       "email": "julien.ravia@gmail.com"
+    },
+    {
+      "name": "Djyp Forest Fortin",
+      "email": "point@plus.yt"
     }
   ],
   "require": {
     "php": "^5.3.3 || ^7.0",
-    "fzaninotto/faker": "~1"
+    "fakerphp/faker": "~1"
   },
   "autoload": {
     "psr-4": {
-      "Xylis\\FakerCinema\\": "src/"
+      "PointPlus\\FakerCinema\\": "src/"
     }
   },
   "require-dev": {
