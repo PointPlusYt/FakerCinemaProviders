@@ -2,12 +2,12 @@
 
 Provider for faker with real datas (real actors, actresses, directors, movies etc)
 
-# Faker Cinema
+## Faker Cinema
 
-[![Packagist](https://img.shields.io/packagist/dt/xylis/faker-cinema-providers.svg?style=flat-square)](https://packagist.org/packages/xylis/faker-cinema-providers)
-[![Travis Build Status](https://img.shields.io/travis/JulienRAVIA/FakerCinemaProviders/master?style=flat-square)](https://travis-ci.org/JulienRAVIA/FakerCinemaProviders)
+[![Packagist](https://img.shields.io/packagist/dt/pointplus/faker-cinema-providers.svg?style=flat-square)](https://packagist.org/packages/pointplus/faker-cinema-providers)
+[![Travis Build Status](https://img.shields.io/travis/JulienRAVIA/FakerCinemaProviders/master?style=flat-square)](https://travis-ci.org/PointPlusYt/FakerCinemaProviders)
 
-A growing collection of useful Providers for [fzaninotto/faker](https://github.com/fzaninotto/faker) mostly ported to PHP from the [stympy/faker](https://github.com/stympy/faker) Ruby library.
+A growing collection of useful Providers for [fakerphp/faker](https://github.com/fakerphp/faker) mostly ported to PHP from the [stympy/faker](https://github.com/stympy/faker) Ruby library.
 
 ## Contents
 
@@ -18,7 +18,7 @@ A growing collection of useful Providers for [fzaninotto/faker](https://github.c
 ## Installation
 
 ```bash
-composer require xylis/faker-cinema-providers
+composer require pointplus/faker-cinema-providers
 ```
 
 ## Formatters
@@ -33,12 +33,12 @@ Below is the list of bundled formatters in the default locale.
 $faker = \Faker\Factory::create();
 $faker->addProvider(new \PointPlus\FakerCinema\Provider\Movie($faker));
 
-$faker->movie; // Saving Private Ryan
-$faker->studio; // 20th Century Fox
-$faker->runtime; // 03:22:06
-$faker->overview; // Faker real text 
-$faker->saga; // The Lords of The Ring Trilogy
-$faker->movieGenre; // Drama
+$faker->movie(); // Saving Private Ryan
+$faker->studio(); // 20th Century Fox
+$faker->runtime(); // 03:22:06
+$faker->overview(); // Faker real text 
+$faker->saga(); // The Lords of The Ring Trilogy
+$faker->movieGenre(); // Drama
 
 $faker->movies(2); // array('Saving Private Ryan', 'La La Land')
 $faker->studios(2); // array('Warner Bros', 'Sony Pictures')
@@ -55,10 +55,10 @@ $faker->movieGenres(2); // array('Drama', 'Comedy');
 $faker = \Faker\Factory::create();
 $faker->addProvider(new \PointPlus\FakerCinema\Provider\TvShow($faker));
 
-$faker->tvShow; // Breaking Bad
-$faker->tvNetwork; // HBO
-$faker->showGenre; // Sitcom
-$faker->overview; // Faker real text
+$faker->tvShow(); // Breaking Bad
+$faker->tvNetwork(); // HBO
+$faker->showGenre(); // Sitcom
+$faker->overview(); // Faker real text
 $faker->tvShowTotalEpisodes($min = 6, $max = 650); // 311
 $faker->tvShowTotalSeasons($min = 1, $max = 25); // 5
 $faker->tvShowEpisodesRuntime($min = 5, $max = 90); // 22
@@ -68,6 +68,7 @@ $faker->tvNetworks(2); // array('Netflix', 'ABC')
 $faker->showGenres(2); // array('Drama', 'Sitcom')
 
 ```
+
 ### `PointPlus\FakerCinema\Provider\Person`
 
 ```php
@@ -76,17 +77,17 @@ $faker->showGenres(2); // array('Drama', 'Sitcom')
 $faker = \Faker\Factory::create();
 $faker->addProvider(new \PointPlus\FakerCinema\Provider\Person($faker));
 
-$faker->actor; // Cate Blanchett
-$faker->femaleActor; // Emma Stone
-$faker->maleActor; // Ryan Gosling
-$faker->director; // Stanley Kubrick
-$faker->femaleDirector; // Agnès Varda
-$faker->maleDirector; // David Fincher
-$faker->composer; // Hans Zimmer
-$faker->cinematographer; // Roger Deakins
-$faker->person; // Cate Blanchett
-$faker->femalePerson; // Emma Stone
-$faker->malePerson; // Ridley Scott
+$faker->actor(); // Cate Blanchett
+$faker->femaleActor(); // Emma Stone
+$faker->maleActor(); // Ryan Gosling
+$faker->director(); // Stanley Kubrick
+$faker->femaleDirector(); // Agnès Varda
+$faker->maleDirector(); // David Fincher
+$faker->composer(); // Hans Zimmer
+$faker->cinematographer(); // Roger Deakins
+$faker->person(); // Cate Blanchett
+$faker->femalePerson(); // Emma Stone
+$faker->malePerson(); // Ridley Scott
 
 $faker->actors($gender = null, $count = 2, $duplicates = false); // array('Christian Bale', 'Amy Adams');
 $faker->actors($gender = 'male', $count = 2, $duplicates = false); // array('Christian Bale', 'Gary Oldman');
@@ -120,8 +121,8 @@ $faker->addProvider(new \PointPlus\FakerCinema\Provider\Character($faker));
 $faker->character($gender = null); // Skyler White
 $faker->character($gender = 'male'); // Darth Vader
 $faker->character($gender = 'female'); // Leia Organa
-$faker->femaleCharacter; // Ellen Ripley
-$faker->maleCharacter; // Walter White
+$faker->femaleCharacter(); // Ellen Ripley
+$faker->maleCharacter(); // Walter White
 $faker->characters($gender = null, $count = 2, $duplicates = false); // array('Darth Vader, 'Leia Organa');
 $faker->characters($gender = 'male', $count = 2, $duplicates = false); // array('Darth Vader', 'Luke Skywalker');
 $faker->characters($gender = 'female', $count = 2, $duplicates = false); // array('O-Ren Ishii', 'Beatrix Kiddo');
@@ -131,11 +132,21 @@ $faker->maleCharacters($count = 2, $duplicates = false); // array('Darth Vader',
 
 ## Changes
 
-#### v1.1.0
+### v1.2
+
+- This project has been tested and is now on packagist.org
+- Updated the README to fit the requirements from FakerPHP in v1.14
+
+### v1.1.1
+
+- Fixed dependency from `fzaninotto/faker` to `fakerphp/faker`
+- Changed the namespace, this project is a fork from `xylis/faker-cinema-providers`
+
+### v1.1.0
 
 - Add `persons, femalePersons, malePersons, person, malePerson, femalePerson`
 
-#### v1.0.1
+### v1.0.1
 
 - Add forgotten parameter `$duplicates` to `femaleDirectors, maleDirectors, maleActors, femaleActors`
 
