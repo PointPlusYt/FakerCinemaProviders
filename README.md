@@ -2,12 +2,12 @@
 
 Provider for faker with real datas (real actors, actresses, directors, movies etc)
 
-# Faker Cinema
+## Faker Cinema
 
-[![Packagist](https://img.shields.io/packagist/dt/xylis/faker-cinema-providers.svg?style=flat-square)](https://packagist.org/packages/xylis/faker-cinema-providers)
-[![Travis Build Status](https://img.shields.io/travis/JulienRAVIA/FakerCinemaProviders/master?style=flat-square)](https://travis-ci.org/JulienRAVIA/FakerCinemaProviders)
+[![Packagist](https://img.shields.io/packagist/dt/pointplus/faker-cinema-providers.svg?style=flat-square)](https://packagist.org/packages/pointplus/faker-cinema-providers)
+[![Travis Build Status](https://img.shields.io/travis/JulienRAVIA/FakerCinemaProviders/master?style=flat-square)](https://travis-ci.org/PointPlusYt/FakerCinemaProviders)
 
-A growing collection of useful Providers for [fzaninotto/faker](https://github.com/fzaninotto/faker) mostly ported to PHP from the [stympy/faker](https://github.com/stympy/faker) Ruby library.
+A growing collection of useful Providers for [fakerphp/faker](https://github.com/fakerphp/faker) mostly ported to PHP from the [stympy/faker](https://github.com/stympy/faker) Ruby library.
 
 ## Contents
 
@@ -18,7 +18,7 @@ A growing collection of useful Providers for [fzaninotto/faker](https://github.c
 ## Installation
 
 ```bash
-composer require xylis/faker-cinema-providers
+composer require pointplus/faker-cinema-providers
 ```
 
 ## Formatters
@@ -68,6 +68,7 @@ $faker->tvNetworks(2); // array('Netflix', 'ABC')
 $faker->showGenres(2); // array('Drama', 'Sitcom')
 
 ```
+
 ### `PointPlus\FakerCinema\Provider\Person`
 
 ```php
@@ -131,11 +132,14 @@ $faker->maleCharacters($count = 2, $duplicates = false); // array('Darth Vader',
 
 ## Changes
 
-#### v1.1.0
+### v1.1.1
+
+
+### v1.1.0
 
 - Add `persons, femalePersons, malePersons, person, malePerson, femalePerson`
 
-#### v1.0.1
+### v1.0.1
 
 - Add forgotten parameter `$duplicates` to `femaleDirectors, maleDirectors, maleActors, femaleActors`
 
